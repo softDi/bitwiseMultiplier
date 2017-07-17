@@ -9,4 +9,3 @@ uint32_t half_add(uint32_t a, uint32_t b) {
     return half_add(sum, carry);
 }
 ```
-more info: https://hackmd.io/s/Hk4Qk9OB-
