@@ -1,6 +1,7 @@
 #include <stdint.h>
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <stdbool.h>
     uint32_t half_add(uint32_t a, uint32_t b) {
         if (b == 0) return a;
         uint32_t sum = a ^ b;             /* 相加但不進位 */
@@ -45,7 +46,12 @@
 		scanf("%d",&multiplier);
         scanf("%d",&multiplicand);
 		// x = a * b;if (a != 0 && x / a != b) {overflow handling}
+		uint64_t ofcheck=multiplier*multiplicand;
+		bool offlag=false;
+		if(multiplier!=0 && ofcheck/multiplier!=multiplicand){offlag=true;}
+		if(!offlag){
 		product=multi(multiplier,multiplicand,product,count,tmpproduct);
-        printf("product=%d",product);
+        printf("product=%d",product);}
+		else{printf("overflow!\n");}
         return 0;
     }
