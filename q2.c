@@ -44,7 +44,8 @@
 		puts("Please enter to numbers:");
 		scanf("%d",&multiplier);
         scanf("%d",&multiplicand);
-        product=multi(multiplier,multiplicand,product,count,tmpproduct);
+		// x = a * b;if (a != 0 && x / a != b) {overflow handling}
+		product=multi(multiplier,multiplicand,product,count,tmpproduct);
         printf("product=%d",product);
         return 0;
     }
